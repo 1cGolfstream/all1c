@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<dataSource>
+			<name>Данные</name>
+			<dataSourceType>Local</dataSourceType>
+		</dataSource>
+		<dataSet xsi:type="DataSetQuery">
+			<name>НачисленияУдержания</name>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидЗанятости</dataPath>
+				<field>ВидЗанятости</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ВидРасчета</dataPath>
+				<field>ВидРасчета</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Группа</dataPath>
+				<field>Группа</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МесяцНачисления</dataPath>
+				<field>МесяцНачисления</field>
+				<appearance>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="dcsset:SettingsParameterValue">
+						<parameter>Формат</parameter>
+						<value xsi:type="xs:string">ДФ='ММММ гггг'</value>
+					</item>
+				</appearance>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Организация</dataPath>
+				<field>Организация</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОтработаноДней</dataPath>
+				<field>ОтработаноДней</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОтработаноЧасов</dataPath>
+				<field>ОтработаноЧасов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПериодДействия</dataPath>
+				<field>ПериодДействия</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Подразделение</dataPath>
+				<field>Подразделение</field>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.Владелец</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сотрудник</dataPath>
+				<field>Сотрудник</field>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.ТекущаяОрганизация</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+							<item>
+								<choiceParameter>Отбор.ТекущееПодразделение</choiceParameter>
+								<value>Подразделение</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Сумма</dataPath>
+				<field>Сумма</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТарифнаяСтавка</dataPath>
+				<field>ТарифнаяСтавка</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ФизическоеЛицо</dataPath>
+				<field>ФизическоеЛицо</field>
+				<inputParameters>
+					<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+						<parameter>СвязиПараметровВыбора</parameter>
+						<value xsi:type="ChoiceParameterLinks">
+							<item>
+								<choiceParameter>Отбор.Организация</choiceParameter>
+								<value>Организация</value>
+								<mode xmlns:d9p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d9p1:LinkedValueChangeMode">Clear</mode>
+							</item>
+						</value>
+					</item>
+				</inputParameters>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Регистратор</dataPath>
+				<field>Регистратор</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплаченоДней</dataPath>
+				<field>ОплаченоДней</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ОплаченоЧасов</dataPath>
+				<field>ОплаченоЧасов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Должность</dataPath>
+				<field>Должность</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ПодразделениеНаКонецПериода</dataPath>
+				<field>ПодразделениеНаКонецПериода</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяРасходов</dataPath>
+				<field>СтатьяРасходов</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>СтатьяФинансирования</dataPath>
+				<field>СтатьяФинансирования</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДолжностьНаКонецПериода</dataPath>
+				<field>ДолжностьНаКонецПериода</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ТарифнаяСтавкаНаКонецПериода</dataPath>
+				<field>ТарифнаяСтавкаНаКонецПериода</field>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РабЧас</dataPath>
+				<field>РабЧас</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Раб час</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>РабДн</dataPath>
+				<field>РабДн</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Раб дн</d5p1:content>
+					</d5p1:item>
+				</title>
+			</field>
+			<dataSource>Данные</dataSource>
+			<query>ВЫБРАТЬ ПЕРВЫЕ 0
+	НачисленияУдержанияВыплаты.МесяцНачисления КАК МесяцНачисления,
+	НачисленияУдержанияВыплаты.Организация КАК Организация,
+	НачисленияУдержанияВыплаты.Сотрудник КАК Сотрудник,
+	НачисленияУдержанияВыплаты.СтатьяФинансирования КАК СтатьяФинансирования,
+	НачисленияУдержанияВыплаты.СтатьяРасходов КАК СтатьяРасходов,
+	НачисленияУдержанияВыплаты.ФизическоеЛицо КАК ФизическоеЛицо,
+	НачисленияУдержанияВыплаты.Подразделение КАК Подразделение,
+	НачисленияУдержанияВыплаты.Группа КАК Группа,
+	НачисленияУдержанияВыплаты.ВидРасчета КАК ВидРасчета,
+	НачисленияУдержанияВыплаты.Сумма КАК Сумма,
+	НачисленияУдержанияВыплаты.ОтработаноДней КАК ОтработаноДней,
+	НачисленияУдержанияВыплаты.ОтработаноЧасов КАК ОтработаноЧасов,
+	НачисленияУдержанияВыплаты.ОплаченоДней КАК ОплаченоДней,
+	НачисленияУдержанияВыплаты.ОплаченоЧасов КАК ОплаченоЧасов,
+	НачисленияУдержанияВыплаты.ПериодДействия КАК ПериодДействия,
+	ЗНАЧЕНИЕ(Документ.НачислениеЗарплаты.ПустаяСсылка) КАК Регистратор,
+	НачисленияУдержанияВыплаты.ПодразделениеНаКонецПериода КАК ПодразделениеНаКонецПериода,
+	НачисленияУдержанияВыплаты.Должность КАК Должность,
+	НачисленияУдержанияВыплаты.ТарифнаяСтавка КАК ТарифнаяСтавка,
+	НачисленияУдержанияВыплаты.ВидЗанятости КАК ВидЗанятости,
+	НачисленияУдержанияВыплаты.ДолжностьНаКонецПериода КАК ДолжностьНаКонецПериода,
+	НачисленияУдержанияВыплаты.ТарифнаяСтавкаНаКонецПериода КАК ТарифнаяСтавкаНаКонецПериода
+ПОМЕСТИТЬ ОбщиеЗапросы_НачисленияУдержания
+{ВЫБРАТЬ
+	МесяцНачисления,
+	Организация.*,
+	Сотрудник.*,
+	СтатьяФинансирования.*,
+	СтатьяРасходов.*,
+	ФизическоеЛицо.*,
+	Подразделение.*,
+	Группа.*,
+	ВидРасчета.*,
+	Сумма,
+	ОтработаноДней,
+	ОтработаноЧасов,
+	ОплаченоДней,
+	ОплаченоЧасов,
+	ПериодДействия,
+	Регистратор.*,
+	ПодразделениеНаКонецПериода.*,
+	Должность.*,
+	ТарифнаяСтавка,
+	ВидЗанятости.*,
+	ДолжностьНаКонецПериода.*,
+	ТарифнаяСтавкаНаКонецПериода}
+ИЗ
+	(ВЫБРАТЬ ПЕРВЫЕ 0
+		ДАТАВРЕМЯ(1, 1, 1) КАК МесяцНачисления,
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка) КАК Организация,
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка) КАК Сотрудник,
+		ЗНАЧЕНИЕ(Справочник.СтатьиФинансированияЗарплата.ПустаяСсылка) КАК СтатьяФинансирования,
+		ЗНАЧЕНИЕ(Справочник.СтатьиРасходовЗарплата.ПустаяСсылка) КАК СтатьяРасходов,
+		ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка) КАК ФизическоеЛицо,
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка) КАК Подразделение,
+		ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.ПустаяСсылка) КАК Группа,
+		ЗНАЧЕНИЕ(ПланВидовРасчета.Начисления.ПустаяСсылка) КАК ВидРасчета,
+		0 КАК Сумма,
+		0 КАК ОтработаноДней,
+		0 КАК ОтработаноЧасов,
+		0 КАК ОплаченоДней,
+		0 КАК ОплаченоЧасов,
+		ДАТАВРЕМЯ(1, 1, 1) КАК ПериодДействия,
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка) КАК ПодразделениеНаКонецПериода,
+		ЗНАЧЕНИЕ(Справочник.Должности.ПустаяСсылка) КАК Должность,
+		0 КАК ТарифнаяСтавка,
+		ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ПустаяСсылка) КАК ВидЗанятости,
+		ЗНАЧЕНИЕ(Справочник.Должности.ПустаяСсылка) КАК ДолжностьНаКонецПериода,
+		0 КАК ТарифнаяСтавкаНаКонецПериода
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ ПЕРВЫЕ 0
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиФинансированияЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиРасходовЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.ПустаяСсылка),
+		ЗНАЧЕНИЕ(ПланВидовРасчета.Удержания.ПустаяСсылка),
+		0,
+		0,
+		0,
+		0,
+		0,
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Должности.ПустаяСсылка),
+		0,
+		ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ПустаяСсылка),
+		NULL,
+		0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ ПЕРВЫЕ 0
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиФинансированияЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиРасходовЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Перечисление.ВидыВзаиморасчетовССотрудниками.ПустаяСсылка),
+		0,
+		0,
+		0,
+		0,
+		0,
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Должности.ПустаяСсылка),
+		0,
+		ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ПустаяСсылка),
+		NULL,
+		0
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ ПЕРВЫЕ 0
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.Организации.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Сотрудники.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиФинансированияЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.СтатьиРасходовЗарплата.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ФизическиеЛица.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Перечисление.ГруппыНачисленияУдержанияВыплаты.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Перечисление.ВидыОсобыхНачисленийИУдержаний.ПустаяСсылка),
+		0,
+		0,
+		0,
+		0,
+		0,
+		ДАТАВРЕМЯ(1, 1, 1),
+		ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка),
+		ЗНАЧЕНИЕ(Справочник.Должности.ПустаяСсылка),
+		0,
+		ЗНАЧЕНИЕ(Перечисление.ВидыЗанятости.ПустаяСсылка),
+		NULL,
+		0) КАК НачисленияУдержанияВыплаты
+{ГДЕ
+	НачисленияУдержанияВыплаты.МесяцНачисления,
+	НачисленияУдержанияВыплаты.Организация.*,
+	НачисленияУдержанияВыплаты.Сотрудник.*,
+	НачисленияУдержанияВыплаты.СтатьяФинансирования.*,
+	НачисленияУдержанияВыплаты.СтатьяРасходов.*,
+	НачисленияУдержанияВыплаты.ФизическоеЛицо.*,
+	НачисленияУдержанияВыплаты.Подразделение.*,
+	НачисленияУдержанияВыплаты.Группа.*,
+	НачисленияУдержанияВыплаты.ВидРасчета.*,
+	НачисленияУдержанияВыплаты.Сумма,
+	НачисленияУдержанияВыплаты.ОтработаноДней,
+	НачисленияУдержанияВыплаты.ОтработаноЧасов,
+	НачисленияУдержанияВыплаты.ОплаченоДней,
+	НачисленияУдержанияВыплаты.ОплаченоЧасов,
+	НачисленияУдержанияВыплаты.ПериодДействия,
+	НачисленияУдержанияВыплаты.ПодразделениеНаКонецПериода.*,
+	НачисленияУдержанияВыплаты.Должность.*,
+	НачисленияУдержанияВыплаты.ТарифнаяСтавка,
+	НачисленияУдержанияВыплаты.ВидЗанятости.*,
+	НачисленияУдержанияВыплаты.ДолжностьНаКонецПериода.*,
+	НачисленияУдержанияВыплаты.ТарифнаяСтавкаНаКонецПериода}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Данные.МесяцНачисления КАК МесяцНачисления,
+	Данные.ФизическоеЛицо КАК ФизическоеЛицо,
+	Данные.СтатьяФинансирования КАК СтатьяФинансирования,
+	Данные.СтатьяРасходов КАК СтатьяРасходов,
+	Данные.Подразделение КАК Подразделение,
+	Данные.ПодразделениеНаКонецПериода КАК ПодразделениеНаКонецПериода,
+	Данные.Группа КАК Группа,
+	Данные.ВидРасчета КАК ВидРасчета,
+	Данные.Сумма КАК Сумма,
+	Данные.ОтработаноДней КАК ОтработаноДней,
+	Данные.ОтработаноЧасов КАК ОтработаноЧасов,
+	Данные.ОплаченоДней КАК ОплаченоДней,
+	Данные.ОплаченоЧасов КАК ОплаченоЧасов,
+	Данные.Организация КАК Организация,
+	Данные.Сотрудник КАК Сотрудник,
+	Данные.Должность КАК Должность,
+	Данные.ТарифнаяСтавка КАК ТарифнаяСтавка,
+	Данные.ВидЗанятости КАК ВидЗанятости,
+	Данные.ПериодДействия КАК ПериодДействия,
+	Данные.Регистратор КАК Регистратор,
+	Данные.ДолжностьНаКонецПериода КАК ДолжностьНаКонецПериода,
+	Данные.ТарифнаяСтавкаНаКонецПериода КАК ТарифнаяСтавкаНаКонецПериода,
+	0 КАК РабДн,
+	0 КАК РабЧас
+{ВЫБРАТЬ
+	МесяцНачисления,
+	ФизическоеЛицо.*,
+	СтатьяФинансирования.*,
+	СтатьяРасходов.*,
+	Подразделение.*,
+	ПодразделениеНаКонецПериода.*,
+	Группа.*,
+	ВидРасчета.*,
+	Сумма,
+	ОтработаноДней,
+	ОтработаноЧасов,
+	ОплаченоДней,
+	ОплаченоЧасов,
+	Организация.*,
+	Сотрудник.*,
+	ВидЗанятости.*,
+	ТарифнаяСтавка,
+	ПериодДействия,
+	Должность.*,
+	Регистратор,
+	ДолжностьНаКонецПериода.*,
+	ТарифнаяСтавкаНаКонецПериода,
+	РабДн,
+	РабЧас}
+ИЗ
+	ОбщиеЗапросы_НачисленияУдержания КАК Данные
+{ГДЕ
+	Данные.МесяцНачисления КАК МесяцНачисления,
+	Данные.ФизическоеЛицо.*,
+	Данные.СтатьяФинансирования.*,
+	Данные.СтатьяРасходов.*,
+	Данные.Подразделение.*,
+	Данные.ПодразделениеНаКонецПериода.*,
+	Данные.Должность.*,
+	Данные.Группа.*,
+	Данные.ВидРасчета.*,
+	Данные.Сумма,
+	Данные.ОтработаноДней,
+	Данные.ОтработаноЧасов,
+	Данные.ОплаченоДней,
+	Данные.ОплаченоЧасов,
+	Данные.Организация.*,
+	Данные.Сотрудник.*,
+	Данные.Регистратор,
+	Данные.ДолжностьНаКонецПериода.*,
+	Данные.ТарифнаяСтавкаНаКонецПериода}</query>
+			<autoFillFields>false</autoFillFields>
+		</dataSet>
+		<calculatedField>
+			<dataPath>Сотрудник.Код</dataPath>
+			<expression>ПрефиксацияОбъектовКлиентСервер.УдалитьПрефиксыИзНомераОбъекта(Сотрудник.Код, Истина, Истина)</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Табельный номер</d4p1:content>
+				</d4p1:item>
+			</title>
+		</calculatedField>
+		<calculatedField>
+			<dataPath>Год</dataPath>
+			<expression>Год(МесяцНачисления)</expression>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Год</d4p1:content>
+				</d4p1:item>
+			</title>
+		</calculatedField>
+		<totalField>
+			<dataPath>ОтработаноДней</dataPath>
+			<expression>Сумма(ОтработаноДней)</expression>
+			<group>ВидЗанятости</group>
+			<group>ВидРасчета</group>
+			<group>Группа</group>
+			<group>Должность</group>
+			<group>МесяцНачисления</group>
+			<group>Организация</group>
+			<group>ПериодДействия</group>
+			<group>Подразделение</group>
+			<group>Подразделение Иерархия</group>
+			<group>ПодразделениеНаКонецПериода</group>
+			<group>ПодразделениеНаКонецПериода Иерархия</group>
+			<group>Регистратор</group>
+			<group>Сотрудник</group>
+			<group>СтатьяФинансирования</group>
+			<group>ФизическоеЛицо</group>
+			<group>ФизическоеЛицо Иерархия</group>
+			<group>ОбщийИтог</group>
+		</totalField>
+		<totalField>
+			<dataPath>ОтработаноЧасов</dataPath>
+			<expression>Сумма(ОтработаноЧасов)</expression>
+			<group>ВидЗанятости</group>
+			<group>ВидРасчета</group>
+			<group>Группа</group>
+			<group>Должность</group>
+			<group>МесяцНачисления</group>
+			<group>Организация</group>
+			<group>ПериодДействия</group>
+			<group>Подразделение</group>
+			<group>Подразделение Иерархия</group>
+			<group>ПодразделениеНаКонецПериода</group>
+			<group>ПодразделениеНаКонецПериода Иерархия</group>
+			<group>Регистратор</group>
+			<group>Сотрудник</group>
+			<group>СтатьяФинансирования</group>
+			<group>ФизическоеЛицо</group>
+			<group>ФизическоеЛицо Иерархия</group>
+			<group>ОбщийИтог</group>
+		</totalField>
+		<totalField>
+			<dataPath>Сумма</dataPath>
+			<expression>Сумма(Сумма)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ТарифнаяСтавка</dataPath>
+			<expression>Максимум(ТарифнаяСтавка)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ОплаченоДней</dataPath>
+			<expression>Сумма(ОплаченоДней)</expression>
+			<group>ВидЗанятости</group>
+			<group>ВидРасчета</group>
+			<group>Группа</group>
+			<group>Должность</group>
+			<group>МесяцНачисления</group>
+			<group>Организация</group>
+			<group>ПериодДействия</group>
+			<group>Подразделение</group>
+			<group>Подразделение Иерархия</group>
+			<group>ПодразделениеНаКонецПериода</group>
+			<group>ПодразделениеНаКонецПериода Иерархия</group>
+			<group>Регистратор</group>
+			<group>Сотрудник</group>
+			<group>СтатьяФинансирования</group>
+			<group>ФизическоеЛицо</group>
+			<group>ФизическоеЛицо Иерархия</group>
+			<group>ОбщийИтог</group>
+		</totalField>
+		<totalField>
+			<dataPath>ОплаченоЧасов</dataPath>
+			<expression>Сумма(ОплаченоЧасов)</expression>
+			<group>ВидЗанятости</group>
+			<group>ВидРасчета</group>
+			<group>Группа</group>
+			<group>Должность</group>
+			<group>МесяцНачисления</group>
+			<group>Организация</group>
+			<group>ПериодДействия</group>
+			<group>Подразделение</group>
+			<group>Подразделение Иерархия</group>
+			<group>ПодразделениеНаКонецПериода</group>
+			<group>ПодразделениеНаКонецПериода Иерархия</group>
+			<group>Регистратор</group>
+			<group>Сотрудник</group>
+			<group>СтатьяФинансирования</group>
+			<group>ФизическоеЛицо</group>
+			<group>ФизическоеЛицо Иерархия</group>
+			<group>ОбщийИтог</group>
+		</totalField>
+		<totalField>
+			<dataPath>РабДн</dataPath>
+			<expression>Сумма(РабДн)</expression>
+		</totalField>
+		<totalField>
+			<dataPath>РабЧас</dataPath>
+			<expression>Сумма(РабЧас)</expression>
+		</totalField>
+		<parameter>
+			<name>КонецПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Конец периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаОкончания</expression>
+		</parameter>
+		<parameter>
+			<name>НачалоПериода</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Начало периода</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:dateTime</Type>
+				<DateQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<DateFractions>DateTime</DateFractions>
+				</DateQualifiers>
+			</valueType>
+			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+			<useRestriction>true</useRestriction>
+			<expression>&amp;Период.ДатаНачала</expression>
+		</parameter>
+		<parameter>
+			<name>Период</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Период</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">StandardPeriod</Type>
+			</valueType>
+			<value xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:StandardPeriod">
+				<d4p1:variant xsi:type="d4p1:StandardPeriodVariant">Custom</d4p1:variant>
+				<d4p1:startDate>0001-01-01T00:00:00</d4p1:startDate>
+				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
+			</value>
+			<useRestriction>false</useRestriction>
+			<availableAsField>false</availableAsField>
+			<use>Always</use>
+		</parameter>
+		<parameter>
+			<name>РазбиватьПоПодразделениям</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Разбивать по подразделениям</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:boolean</Type>
+			</valueType>
+			<value xsi:type="xs:boolean">false</value>
+			<useRestriction>false</useRestriction>
+			<availableAsField>false</availableAsField>
+		</parameter>
+		<parameter>
+			<name>ПервыйНомер</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Первый номер</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core">xs:decimal</Type>
+				<NumberQualifiers xmlns="http://v8.1c.ru/8.1/data/core">
+					<Digits>8</Digits>
+					<FractionDigits>0</FractionDigits>
+					<AllowedSign>Any</AllowedSign>
+				</NumberQualifiers>
+			</valueType>
+			<value xsi:type="xs:decimal">0</value>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>Ответственный</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Ответственный</d4p1:content>
+				</d4p1:item>
+			</title>
+			<valueType>
+				<Type xmlns="http://v8.1c.ru/8.1/data/core" xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</Type>
+			</valueType>
+			<value xsi:nil="true"/>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<parameter>
+			<name>ДолжностьОтветственного</name>
+			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Должность</d4p1:content>
+				</d4p1:item>
+			</title>
+			<value xsi:nil="true"/>
+			<useRestriction>false</useRestriction>
+		</parameter>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">РасчетныйЛисток</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Расчетный листок</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
+	</dataCompositionSchema>
+</SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<userFields>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле1</dataPath>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КВыплате</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<detailExpression>Выбор
+	Когда ВидРасчета = Значение(Перечисление.ВидыВзаиморасчетовССотрудниками.ВыплатаЗарплаты)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда [Вид расчета] = Значение(Перечисление.ВидыВзаиморасчетовССотрудниками.ВыплатаЗарплаты)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpressionPresentation>
+			<totalExpression>Сумма(Выбор
+		Когда ВидРасчета = Значение(Перечисление.ВидыВзаиморасчетовССотрудниками.ВыплатаЗарплаты)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Сумма(Выбор
+		Когда [Вид расчета] = Значение(Перечисление.ВидыВзаиморасчетовССотрудниками.ВыплатаЗарплаты)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpressionPresentation>
+		</item>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле2</dataPath>
+			<title>СуммаНачислено</title>
+			<detailExpression>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpressionPresentation>
+			<totalExpression>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpressionPresentation>
+		</item>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле6</dataPath>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СуммаНачисленоВНатуральнойФорме</v8:content>
+				</v8:item>
+			</lwsTitle>
+			<detailExpression>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) И ЕстьNull(ВидРасчета.ЯвляетсяДоходомВНатуральнойФорме, Ложь)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) И ЕстьNull([Вид расчета.Является доходом в натуральной форме], Ложь)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpressionPresentation>
+			<totalExpression>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) И ЕстьNull(ВидРасчета.ЯвляетсяДоходомВНатуральнойФорме, Ложь)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) И ЕстьNull([Вид расчета.Является доходом в натуральной форме], Ложь)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpressionPresentation>
+		</item>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле3</dataPath>
+			<title>СуммаУдержано</title>
+			<detailExpression>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+		Тогда Сумма
+	Иначе 0
+Конец</detailExpressionPresentation>
+			<totalExpression>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Сумма(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+			Тогда Сумма
+		Иначе 0
+	Конец)</totalExpressionPresentation>
+		</item>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле4</dataPath>
+			<title>Начисление</title>
+			<detailExpression>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+		Тогда ВидРасчета
+	Иначе ""
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+		Тогда [Вид расчета]
+	Иначе ""
+Конец</detailExpressionPresentation>
+			<totalExpression>Максимум(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+			Тогда ВидРасчета
+		Иначе ""
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Максимум(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Начислено) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Справочно)
+			Тогда [Вид расчета]
+		Иначе ""
+	Конец)</totalExpressionPresentation>
+		</item>
+		<item xsi:type="UserFieldExpression">
+			<dataPath>ПользовательскиеПоля.Поле5</dataPath>
+			<title>Удержание</title>
+			<detailExpression>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+		Тогда ВидРасчета
+	Иначе ""
+Конец</detailExpression>
+			<detailExpressionPresentation>Выбор
+	Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+		Тогда [Вид расчета]
+	Иначе ""
+Конец</detailExpressionPresentation>
+			<totalExpression>Максимум(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+			Тогда ВидРасчета
+		Иначе ""
+	Конец)</totalExpression>
+			<totalExpressionPresentation>Максимум(Выбор
+		Когда Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Удержано) Или Группа = Значение(Перечисление.ГруппыНачисленияУдержанияВыплаты.Выплачено)
+			Тогда [Вид расчета]
+		Иначе ""
+	Конец)</totalExpressionPresentation>
+		</item>
+	</userFields>
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ОтработаноДней</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ОтработаноЧасов</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Сумма</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ОплаченоДней</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ОплаченоЧасов</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПользовательскиеПоля.Поле2</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПользовательскиеПоля.Поле6</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПользовательскиеПоля.Поле3</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПользовательскиеПоля.Поле4</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ПользовательскиеПоля.Поле5</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РабДн</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>РабЧас</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Организация</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>d437e30d-b035-4b51-a167-ffdd29bbb054</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Подразделение</left>
+			<comparisonType>InHierarchy</comparisonType>
+			<viewMode>Normal</viewMode>
+			<userSettingID>7a5bb8bc-f86f-4db9-a4ef-5bec6363e04d</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Должность</left>
+			<comparisonType>InList</comparisonType>
+			<right xsi:type="v8:ValueListType">
+				<v8:valueType/>
+				<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+			</right>
+			<viewMode>Normal</viewMode>
+			<userSettingID>72c11e9d-70f0-4f88-94b3-ede90201d666</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Сотрудник</left>
+			<comparisonType>InList</comparisonType>
+			<viewMode>Normal</viewMode>
+			<userSettingID>62c918af-be43-44a3-8bd2-9f5fe22ae585</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">LastMonth</v8:variant>
+			</dcscor:value>
+			<userSettingID>3eec1a1c-a281-48d3-84a7-34736011bcad</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РазбиватьПоПодразделениям</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			<userSettingID>cee2b660-7ddb-4964-986c-0c1f61e97b87</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ПодразделениеНаКонецПериода.РеквизитДопУпорядочиванияИерархического</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ДолжностьНаКонецПериода.РеквизитДопУпорядочивания</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>Сотрудник.ФизическоеЛицо.ФИО</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ВидРасчета.Порядок</field>
+			<orderType>Asc</orderType>
+		</item>
+		<item xsi:type="OrderItemField">
+			<field>ВидРасчета.РеквизитДопУпорядочивания</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>МесяцНачисления</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>Организация</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>ПодразделениеНаКонецПериода</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemAuto"/>
+				</selection>
+				<item xsi:type="StructureItemGroup">
+					<groupItems>
+						<item xsi:type="GroupItemField">
+							<field>Сотрудник</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+						<item xsi:type="GroupItemField">
+							<field>ДолжностьНаКонецПериода</field>
+							<groupType>Items</groupType>
+							<periodAdditionType>None</periodAdditionType>
+							<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+							<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+						</item>
+					</groupItems>
+					<order>
+						<item xsi:type="OrderItemAuto"/>
+					</order>
+					<selection>
+						<item xsi:type="SelectedItemAuto"/>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.ФизическоеЛицо.ФИО</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ПользовательскиеПоля.Поле1</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>ТарифнаяСтавка</field>
+						</item>
+						<item xsi:type="SelectedItemField">
+							<field>Сотрудник.Код</field>
+						</item>
+					</selection>
+					<item xsi:type="StructureItemGroup">
+						<groupItems>
+							<item xsi:type="GroupItemField">
+								<field>Группа</field>
+								<groupType>Items</groupType>
+								<periodAdditionType>None</periodAdditionType>
+								<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+								<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+							</item>
+						</groupItems>
+						<order>
+							<item xsi:type="OrderItemAuto"/>
+						</order>
+						<selection>
+							<item xsi:type="SelectedItemAuto"/>
+						</selection>
+						<item xsi:type="StructureItemGroup">
+							<groupItems>
+								<item xsi:type="GroupItemField">
+									<field>ВидРасчета</field>
+									<groupType>Items</groupType>
+									<periodAdditionType>None</periodAdditionType>
+									<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+									<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+								</item>
+								<item xsi:type="GroupItemField">
+									<field>ПериодДействия</field>
+									<groupType>Items</groupType>
+									<periodAdditionType>None</periodAdditionType>
+									<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+									<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+								</item>
+							</groupItems>
+							<order>
+								<item xsi:type="OrderItemAuto"/>
+							</order>
+							<selection>
+								<item xsi:type="SelectedItemAuto"/>
+							</selection>
+							<item xsi:type="StructureItemGroup">
+								<order>
+									<item xsi:type="OrderItemAuto"/>
+								</order>
+								<selection>
+									<item xsi:type="SelectedItemAuto"/>
+								</selection>
+							</item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema">
+		<template>
+			<name>Макет3</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xsi:type="dcscor:Parameter">ВидРасчета</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>0</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+			<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+				<dcsat:name>ВидРасчета</dcsat:name>
+				<dcsat:expression>Представление(ВидРасчета)</dcsat:expression>
+			</parameter>
+		</template>
+		<template>
+			<name>Макет2</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xsi:type="dcscor:Parameter">Группа</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>0</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+			<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+				<dcsat:name>Группа</dcsat:name>
+				<dcsat:expression>Представление(Группа)</dcsat:expression>
+			</parameter>
+		</template>
+		<template>
+			<name>Макет4</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:d8p1="http://v8.1c.ru/8.1/data/core" xsi:type="d8p1:LocalStringType">
+								<d8p1:item>
+									<d8p1:lang>ru</d8p1:lang>
+									<d8p1:content>Организация, подразделение</d8p1:content>
+								</d8p1:item>
+							</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>0</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:appIndex>1</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:appIndex>1</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+		</template>
+		<template>
+			<name>Макет5</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:d8p1="http://v8.1c.ru/8.1/data/core" xsi:type="d8p1:LocalStringType">
+								<d8p1:item>
+									<d8p1:lang>ru</d8p1:lang>
+									<d8p1:content>Сумма, дни, часы</d8p1:content>
+								</d8p1:item>
+							</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>0</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+		</template>
+		<template>
+			<name>Макет6</name>
+			<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+				<dcsat:item xsi:type="dcsat:TableRow">
+					<dcsat:tableCell>
+						<dcsat:item xsi:type="dcsat:Field">
+							<dcsat:value xmlns:d8p1="http://v8.1c.ru/8.1/data/core" xsi:type="d8p1:LocalStringType">
+								<d8p1:item>
+									<d8p1:lang>ru</d8p1:lang>
+									<d8p1:content>Начисление/Удержание</d8p1:content>
+								</d8p1:item>
+							</dcsat:value>
+						</dcsat:item>
+						<dcsat:appIndex>2</dcsat:appIndex>
+					</dcsat:tableCell>
+				</dcsat:item>
+			</template>
+		</template>
+		<groupTemplate>
+			<groupName>ВидРасчетаВКолонке</groupName>
+			<templateType>Header</templateType>
+			<template>Макет3</template>
+		</groupTemplate>
+		<groupTemplate>
+			<groupName>ГруппаВКолонке</groupName>
+			<templateType>Header</templateType>
+			<template>Макет2</template>
+		</groupTemplate>
+		<groupTemplate>
+			<groupName>СводОрганизация</groupName>
+			<templateType>Header</templateType>
+			<template>Макет5</template>
+		</groupTemplate>
+		<groupHeaderTemplate>
+			<groupName>ОрганизацияТаблица</groupName>
+			<templateType>Header</templateType>
+			<template>Макет4</template>
+		</groupHeaderTemplate>
+		<groupHeaderTemplate>
+			<groupName>СводНачальноеСальдо</groupName>
+			<templateType>Header</templateType>
+			<template>Макет6</template>
+		</groupHeaderTemplate>
+	</dataCompositionSchema>
+	<appearance xmlns="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="TableCellAppearance">
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>Размещение</parameter>
+			<value xsi:type="DataCompositionTextPlacementType">Wrap</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МинимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МаксимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+	</appearance>
+	<appearance xmlns="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="TableCellAppearance">
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МинимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МаксимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>ОбъединятьПоВертикали</parameter>
+			<value xsi:type="xs:boolean">true</value>
+		</item>
+	</appearance>
+	<appearance xmlns="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="TableCellAppearance">
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МинимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+		<item xmlns="http://v8.1c.ru/8.1/data-composition-system/core">
+			<parameter>МаксимальнаяШирина</parameter>
+			<value xsi:type="xs:decimal">15.625</value>
+		</item>
+	</appearance>
+</SchemaFile>
